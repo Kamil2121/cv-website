@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Kamil Portfolio</title>
+  </head>
+  <body>
+
+    <div class="container navbar">
+      <header>
+        <div class="logo">
+          <h1>Kamil</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li class="eng"><a href="#about">about me</a></li>
+            <li class="eng"><a href="#skills">skills</a></li>
+            <li class="eng"><a href="#work">my work</a></li>
+            <li class="pl hide"><a href="#about">o mnie</a></li>
+            <li class="pl hide"><a href="#skills">umiejętności</a></li>
+            <li class="pl hide"><a href="#work">moje projekty</a></li>
+            <li><a><img onclick="chooseLanguage()" class="language-button polish" id="hej" src="img/polish.png" width="30px" height="20px"></a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="container main-into-section">
+      <div class="text">
+        <h1>
+          <span>H</span>
+          <span class="m-left">i</span>
+          <span class="m-left">,</span>
+          <br>
+          <span>I</span>
+          <span class="m-left">'</span>
+          <span class="m-left">m</span>
+          <span class="name">K</span>
+          <span class="m-left name">a</span>
+          <span class="m-left name">m</span>
+          <span class="m-left name">i</span>
+          <span class="m-left name">l</span>
+          <span class="m-left">,</span>
+          <br>
+          <span>W</span>
+          <span class="m-left">e</span>
+          <span class="m-left">b</span>
+          <span>D</span>
+          <span class="m-left">e</span>
+          <span class="m-left">v</span>
+          <span class="m-left">e</span>
+          <span class="m-left">l</span>
+          <span class="m-left">o</span>
+          <span class="m-left">p</span>
+          <span class="m-left">e</span>
+          <span class="m-left">r</span>
+          <span class="m-left">.</span>
+        </h1>
+        <p>CSS / JavaScript / Angular</p>
+        <a id="contact-button" href="#contact">contact me</a>
+      </div>
+    </div>
+
+    <div class="container about" id="about">
+      <h1 class="eng">About</h1>
+      <h1 class="pl hide">o mnie</h1>
+      <div class="about-me-info pl hide">
+        <p>Nazywam się Kamil. Mam 23 lata. Jestem studentem trzeciego roku informatyki
+          na Politechnice Świętokrzyskiej w Kielcach.</p>
+        <p>Od gimnazjum interesuje się programowaniem. Swoją przygodę zaczynałem
+          od projektowania gier na androida w zintegrowanym środowisku Unity3D.</p>
+        <p>Na chwilę obecną interesuję się internetem rzeczy oraz tworzeniem aplikacji
+          internetowych i z tym chciałbym związać swoją przyszłość zawodową.
+        </p>
+      </div>
+      <div class="about-me-info eng">
+        <p>My name is Kamil. I'm 23 years old. I am a 3rd year student of computer
+          science at the Kielce University of Technology.</p>
+        <p>I have been interested in programming since junior high. Your adventure begins
+          from designing android games in the integrated Unity3D software.</p>
+        <p>At the moment I am interested in the Internet of Things and application development.
+          I would like to link my professional future with this.
+        </p>
+      </div>
+      <img src="img/dotted-shape.png" alt="">
+    </div>
+
+    <div class="container skills" id="skills">
+      <h1 class="eng">Skills</h1>
+      <h1 class="pl hide">umiejętności</h1>
+      <p class="skills-info eng">Main technologies: JavaScript, Typescript, HTML5, CSS3, Angular <br>
+        Technologies that I know to a lesser extent: Java, SQL, PL/SQL, Node.js <br>
+        Technologies with which i had contact: Python, Ruby, C, C++, C#
+      </p>
+      <p class="skills-info pl hide">Główne technologie: JavaScript, Typescript, HTML5, CSS3, Angular <br>
+        Technologie, które znam w mniejszym stopniu: Java, SQL, PL/SQL, Node.js <br>
+        Technologie, z którymi miałem kontakt: Python, Ruby, C, C++, C#
+      </p>
+      <div class="html">
+        <div class="tag-html">
+          <p>HTML</p>
+        </div>
+        <div class="progressbar">
+          <div class="bar-html"></div>
+        </div>
+      </div>
+      <div class="html">
+        <div class="tag-css">
+          <p>CSS</p>
+        </div>
+        <div class="progressbar">
+          <div class="bar-css"></div>
+        </div>
+      </div>
+      <div class="html">
+        <div class="tag-javascript">
+          <p>JavaScript</p>
+        </div>
+        <div class="progressbar">
+          <div class="bar-javascript"></div>
+        </div>
+      </div>
+      <div class="html">
+        <div class="tag-angular">
+          <p>Angular</p>
+        </div>
+        <div class="progressbar">
+          <div class="bar-angular"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container work" id="work">
+      <h1 class="eng">Work</h1>
+      <h1 class="pl hide">moje projekty</h1>
+      <div class="work-category">
+        <button id="all" class="active" onclick="showRequiredCategory(this)">All Projects</button>
+        <button id="iot" onclick="showRequiredCategory(this)">IOT Projects</button>
+        <button id="angular" onclick="showRequiredCategory(this)">Angular Projects</button>
+      </div>
+      <div class="category-all showCategory">
+        <a href="https://uks-meteor-wachock.herokuapp.com"><img src="img/1.png"></a>
+        <a href="https://my-iot-project1.herokuapp.com"><img src="img/2.png"></a>
+        <a href="http://mychat-angular.herokuapp.com"><img src="img/3.png"></a>
+        <a href="https://mylogin-panel.herokuapp.com"><img src="img/4.png"></a>
+        <a href="https://github.com/Kamil2121"><img src="img/5.png"></a>
+      </div>
+      <div class="category-iot hideCategory">
+        <a href="https://my-iot-project1.herokuapp.com"><img src="img/2.png"></a>
+        <a href="https://github.com/Kamil2121"><img src="img/5.png"></a>
+      </div>
+      <div class="category-angular hideCategory">
+        <a href="http://mychat-angular.herokuapp.com"><img src="img/3.png"></a>
+        <a href="https://mylogin-panel.herokuapp.com"><img src="img/4.png"></a>
+        <a href="https://github.com/Kamil2121"><img src="img/5.png"></a>
+      </div>
+    </div>
+
+    <div class="container contact" id="contact">
+      <h1 class="eng">Contact</h1>
+      <h1 class="pl hide">kontakt</h1>
+      <form method="POST" action="https://formspree.io/f/xaylkalb">
+        <input id="form-name" type="text" name="name" placeholder="Full Name">
+        <input id="form-email" type="email" name="_replyto" placeholder="Email">
+        <input type="email" placeholder="PortfolioPersonemail@example.com" disabled>
+        <textarea id="form-message" name="message" cols="30" rows="10" placeholder="Message"></textarea>
+        <input id="form-submit" type="submit" value="Send">
+      </form>
+    </div>
+
+    <footer>
+      <hr>
+      <p>2021 Copyright. All Rights Reserved</p>
+    </footer>
+
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/animation.gsap.min.js"></script>
+    <script src="js/TimelineLite.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/CSSPlugin.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
